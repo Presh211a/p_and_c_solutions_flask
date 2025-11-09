@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}About Us{% endblock %}
+{% block content %}
+
+<section class="about-page">
+  <h2 class="section-title">About P&C Solutions</h2>
+  <p class="section-subtitle">Empowering businesses and individuals with seamless technology solutions.</p>
+
+  <div class="about-content">
+    <p>P&C Solutions is a leading tech company specializing in software development, website and mobile app creation, and IT support. Our goal is to simplify technology for our clients, providing solutions that work and drive success.</p>
+
+    <h3>What We Do</h3>
+    <ul>
+      <li>Hardware sales and repairs: Laptops, desktops, and peripherals.</li>
+      <li>Software installation, updates, and troubleshooting.</li>
+      <li>Custom web and mobile app development.</li>
+      <li>Business software solutions: inventory, billing, and management systems.</li>
+      <li>Project writing and documentation for students and professionals.</li>
+      <li>Virtual and online technical support.</li>
+    </ul>
+
+    <p>Our team combines expertise, creativity, and dedication to ensure that every project we undertake delivers value and efficiency. At P&C Solutions, technology is simple, accessible, and effective.</p>
+  </div>
+</section>
+
+<style>
+.about-page {
+  margin-top: 40px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.about-page .section-title {
+  font-size: 28px;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.about-page .section-subtitle {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 15px;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.about-content h3 {
+  margin-top: 20px;
+  color: var(--blue);
+}
+
+.about-content ul {
+  margin-top: 12px;
+  list-style: disc;
+  padding-left: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+{% endblock %}

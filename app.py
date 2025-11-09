@@ -137,10 +137,13 @@ Message:
 
     return render_template("contact.html", site_name="P&C Solutions", contact_email=CONTACT_EMAIL)
 
+@app.route('/about')
+def about():
+    return render_template('about.html', site_name="P&C Solutions", contact_email="pcsolutions800@gmail.com")
+
+
 # ============================
 # Run app
 # ============================
 if __name__ == "__main__":
-    import os
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port, debug=True)
+    app.run(debug=True)
