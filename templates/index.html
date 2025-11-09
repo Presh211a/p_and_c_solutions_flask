@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<section class="hero">
+  <div class="hero-left">
+    <h2>Trusted computer sales, repairs, and software solutions</h2>
+    <p>
+      We sell and repair laptops & computer systems, develop software, websites, and mobile apps,
+      provide virtual support, and offer project writing services for students and businesses.
+    </p>
+
+    <div class="cta">
+      <a class="btn primary cta-btn" href="{{ url_for('services') }}">
+        🚀 Our Services
+      </a>
+      <a class="btn outline cta-btn secondary" href="{{ url_for('contact') }}">
+        💬 Get a Quote
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="card highlight">
+      <h3>⚡ Same-day Diagnostics</h3>
+      <p>Fast, secure, and affordable repairs. Remote support available.</p>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <h3 class="section-title">What We Do</h3>
+  <div class="grid">
+    <div class="feature">
+      <div class="icon">💻</div>
+      <h4>Sales & Repairs</h4>
+      <p>Laptop and desktop repairs, upgrades, and new system setup.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">⚙️</div>
+      <h4>Software Support</h4>
+      <p>OS installs, software setup, virus removal, and performance tuning.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">🌐</div>
+      <h4>Web & App Development</h4>
+      <p>Responsive websites and mobile apps tailored to your needs.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">📝</div>
+      <h4>Project Writing Services</h4>
+      <p>Research, writing, formatting, and proofreading for academic and business projects.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">🔧</div>
+      <h4>Custom Software</h4>
+      <p>Inventory systems, booking platforms, and more.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">💬</div>
+      <h4>Virtual Support</h4>
+      <p>Remote troubleshooting and onboarding for remote teams.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ===========================
+   CTA Buttons — Premium Look
+   =========================== */
+.cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.cta-btn {
+  min-width: 160px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Primary CTA (Our Services) */
+.btn.primary {
+  background: linear-gradient(90deg, var(--blue), #004ad8);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(11, 110, 253, 0.35);
+}
+
+.btn.primary:hover {
+  background: linear-gradient(90deg, #004ad8, var(--blue));
+  transform: translateY(-3px);
+  box-shadow: 0 6px 22px rgba(11, 110, 253, 0.45);
+}
+
+/* Shine effect animation */
+.btn.primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
+}
+.btn.primary:hover::before {
+  left: 130%;
+}
+
+/* Outline CTA (Get a Quote) */
+.btn.outline {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  background: transparent;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn.outline:hover {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(11, 110, 253, 0.3);
+  transform: translateY(-3px);
+}
+
+/* Mobile responsiveness for CTAs */
+@media (max-width: 700px) {
+  .cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cta-btn {
+    width: 100%;
+  }
+}
+</style>
+
+{% endblock %}

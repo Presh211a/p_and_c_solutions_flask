@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% block title %}Services{% endblock %}
+{% block content %}
+
+<section class="services-page">
+  <h2>Our Services</h2>
+  <p class="subtitle">
+    Comprehensive solutions to keep your tech, business, and projects on track.
+  </p>
+
+  <div class="services-list">
+    <article class="service-card">
+      <div class="icon">💻</div>
+      <h3>Laptop & Computer Sales and Repairs</h3>
+      <p>Hardware repairs, upgrades, component replacement, and new system setup for personal and business use.</p>
+    </article>
+
+    <article class="service-card">
+      <div class="icon">⚙️</div>
+      <h3>Software Installation & Troubleshooting</h3>
+      <p>Operating system installations, driver setup, virus removal, and performance optimization for smoother operation.</p>
+    </article>
+
+    <article class="service-card">
+      <div class="icon">🌐</div>
+      <h3>Website & Mobile App Development</h3>
+      <p>Custom web and mobile solutions using modern stacks — fully responsive, secure, and user-friendly.</p>
+    </article>
+
+    <article class="service-card">
+      <div class="icon">📝</div>
+      <h3>Project Writing Services</h3>
+      <p>Research, documentation, formatting, proofreading, and presentation-ready write-ups for students and professionals.</p>
+    </article>
+
+    <article class="service-card">
+      <div class="icon">🔧</div>
+      <h3>Custom Software Solutions</h3>
+      <p>Tailored business software such as inventory management, billing, and digital record systems.</p>
+    </article>
+
+    <article class="service-card">
+      <div class="icon">💬</div>
+      <h3>Virtual & Online Tech Support</h3>
+      <p>Remote troubleshooting, 24/7 virtual assistance, and onboarding for remote teams or individuals.</p>
+    </article>
+  </div>
+
+  <div class="cta services-cta">
+    <a class="btn primary cta-btn" href="{{ url_for('contact') }}">
+      💬 Request a Quote
+    </a>
+    <a class="btn outline cta-btn" href="{{ url_for('contact') }}">
+      📞 Contact Us
+    </a>
+  </div>
+</section>
+
+<style>
+/* ===========================
+   Services Page Styling
+   =========================== */
+.services-page {
+  margin-top: 32px;
+}
+
+.services-page h2 {
+  font-size: 28px;
+  margin-bottom: 6px;
+  color: var(--dark);
+  text-align: center;
+}
+
+.services-page .subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 28px;
+  font-size: 15px;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.service-card {
+  background: var(--card);
+  padding: 20px 18px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(2, 6, 23, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  text-align: center;
+  border: 1px solid #e8edf5;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(2, 6, 23, 0.12);
+  border-color: var(--blue);
+}
+
+.service-card .icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: var(--blue);
+}
+
+.service-card h3 {
+  margin: 10px 0;
+  font-size: 18.5px;
+  color: var(--dark);
+}
+
+.service-card p {
+  font-size: 14.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* CTA Buttons at bottom */
+.services-cta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+/* Reuse button styles from homepage */
+.cta-btn {
+  min-width: 160px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, var(--blue), #004ad8);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(11, 110, 253, 0.35);
+}
+
+.btn.primary:hover {
+  background: linear-gradient(90deg, #004ad8, var(--blue));
+  transform: translateY(-3px);
+  box-shadow: 0 6px 22px rgba(11, 110, 253, 0.45);
+}
+
+.btn.outline {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn.outline:hover {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(11, 110, 253, 0.3);
+  transform: translateY(-3px);
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+  .services-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cta-btn {
+    width: 100%;
+  }
+}
+</style>
+
+{% endblock %}
