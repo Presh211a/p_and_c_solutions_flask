@@ -142,6 +142,10 @@ def about():
     return render_template('about.html', site_name="P&C Solutions", contact_email="pcsolutions800@gmail.com")
 
 
+@app.route('/portfolio')
+def portfolio():
+    return render_template('portfolio.html')
+
 # ============================
 # Run app
 # ============================
